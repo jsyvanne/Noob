@@ -7,7 +7,7 @@ jobs:
   Run-Tasks-After-PR:
     runs-on: ubuntu-latest
     env:
-      VARYING_VARIABLE: ${{ secrets.VARYING_VARIABLE }}
+      VARYING_VARIABLE: ${{ vars.VARYING_VARIABLE }}
     steps:
       - run: echo "Accessing the environment variable ${{env.VARYING_VARIABLE}}"
       - run: echo "Accessing the environment variable ${{secrets.SUPER_SECRET}}"
