@@ -1,7 +1,8 @@
 name: Pull Request To Staging
 run-name: PR to Staging Opened 🚀
-on: [pull_request]
-  branches: [ "staging" ]
+on:
+  pull_request:
+    branches: ["staging"]
 jobs:
   Run-Tasks-After-PR:
     runs-on: ubuntu-latest
