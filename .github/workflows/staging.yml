@@ -1,7 +1,8 @@
 name: Merged To Staging
 run-name: PR to Staging Merged
-on: [push]
-  branches: [ "staging" ]
+on:
+  push:
+    branches: ["staging"]
 jobs:
   Run-Tasks-After-PR:
     runs-on: ubuntu-latest
