@@ -6,8 +6,6 @@ on:
 jobs:
   Run-Tasks-After-PR:
     runs-on: ubuntu-latest
-    secrets:
-      SUPER_SECRET: ${{ secrets.SUPER_SECRET }}
     env:
       VARYING_VARIABLE: ${{ secrets.VARYING_VARIABLE }}
     steps:
