@@ -6,7 +6,7 @@ on:
 jobs:
   Run-Tasks-After-PR:
     runs-on: ubuntu-latest
-    environment: dev
+    environment: staging
     env:
       SUPER_SECRET: ${{ secrets.SUPER_SECRET}}
       VARYING_VARIABLE: ${{ vars.VARYING_VARIABLE }}
