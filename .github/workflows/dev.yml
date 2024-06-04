@@ -1,5 +1,5 @@
 name: Pull Request To Staging
-run-name: PR to Staging Opened 🚀
+run-name: PR to Staging Opened
 on:
   pull_request:
     branches: ["staging"]
@@ -7,6 +7,7 @@ jobs:
   Run-Tasks-After-PR:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "the environment variable:  ${{secrets.VARYING_VARIABLE}}"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
