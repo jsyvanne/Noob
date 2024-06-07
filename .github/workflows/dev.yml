@@ -10,9 +10,13 @@ jobs:
     env:
       SUPER_SECRET: ${{ secrets.SUPER_SECRET}}
       VARYING_VARIABLE: ${{ vars.VARYING_VARIABLE }}
+      REPO_SECRET: ${{ secrets.REPOSITORY_SECRET }}
+      REPO_ENVVAR: ${{vars.REPOSITORY_VARIABLE}}
     steps:
       - run: echo "Accessing the environment variable $VARYING_VARIABLE"
       - run: echo "Accessing the environment variable $SUPER_SECRET"
+      - run: echo "Accessing the REPO secret $REPO_SECRET"
+      - run: echo "Accessing the REPO variable $REPO_ENVVAR"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
